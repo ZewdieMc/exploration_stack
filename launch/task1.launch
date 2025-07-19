@@ -1,0 +1,19 @@
+<launch>
+    <!-- Gazebo with turtlebot3 world -->
+  <!-- <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" /> -->
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch" />
+
+  <!-- Custom controller node -->
+  <node pkg="phd_luea" type="pose_controller.py" name="pose_controller" output="screen"/>
+
+  <!-- Circle tracker node -->
+  <!-- <node pkg="phd_luea" type="circle_tracker.py" name="circle_tracker" output="screen"/> -->
+
+<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <param name="robot_description" command="$(find xacro)/xacro '$(find turtlebot3_description)/urdf/turtlebot3_burger.urdf.xacro'" />
+</node>
+
+  <!-- RViz visualization -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find phd_luea)/rviz/phd.rviz" output="screen"/>
+
+</launch>

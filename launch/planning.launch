@@ -1,0 +1,16 @@
+<launch>
+  <!-- Set TurtleBot3 model -->
+
+    <!-- exploration -->
+    <node pkg="phd_luea" type="frontier_planner_node.py" name="frontier_planner_node" output="screen"/>
+
+    <!-- global path planner -->
+    <node pkg="phd_luea" type="global_path_planner_node.py" name="global_planner_node" output="screen"/>
+
+    <!-- DWA planner -->
+    <node pkg="phd_luea" type="dwa_node.py" name="dwa_node" output="screen"/>
+
+    <!-- SM  -->
+    <node pkg="phd_luea" type="state_machine.py" name="state_machine_node" output="screen"/> 
+
+</launch>
