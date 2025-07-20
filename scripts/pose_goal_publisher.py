@@ -95,7 +95,7 @@ class SequentialGoalPublisher:
                 self.current_goal_idx += 1
                 self.goal_sent = False
                 rospy.sleep(1.0)  # Small pause before next goal
-            self.rate.sleep()
+            # self.rate.sleep()
         rospy.loginfo("All goals published and reached.")
 
 if __name__ == '__main__':
