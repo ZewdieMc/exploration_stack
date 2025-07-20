@@ -1,4 +1,4 @@
-# ho_planning - ROS Package
+# PhD assignment - autonomous exploration 
 
 This ROS package is designed for robot planning tasks, including state machine execution, frontier-based exploration, global path planning, and local path following using DWA algorithm.
 
