@@ -57,3 +57,6 @@ sudo apt install ros-noetic-navigation ros-noetic-map-server
 
 roslaunch phd_luea task2.launch # then open rviz config (src/phd_luea/rviz/task2.rviz)
 ```
+
+## Demo
+[Watch this video on YouTube](https://www.youtube.com/watch?v=BC9ialCNbX4)
